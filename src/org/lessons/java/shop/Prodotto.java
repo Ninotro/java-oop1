@@ -11,9 +11,8 @@ public class Prodotto {
 
     public Prodotto( String name, String  description, float price,int  iva) {
 
-        Random randomGenerator = new Random();
-        int randomNumber = randomGenerator.nextInt(0, 99999999);
-        code = randomNumber;
+
+        code = generateRandomCode();
         this.name = name;
         this.description= description;
         this.price = price;
@@ -72,6 +71,19 @@ public class Prodotto {
         return code+name ;
     }
 
+  private int  generateRandomCode() {
+
+      Random randomGenerator = new Random();
+      int randomNumber = randomGenerator.nextInt(0, 99999999);
+
+
+
+
+
+
+
+      return randomNumber;
+  }
 
 
 
